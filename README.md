@@ -4,9 +4,7 @@ In this empirical work a deep learning approach for classification of intraday f
 was presented using a LSTM neural network. To this end a data set of hourly open, high, low,
 close price data of the S&P500 was used. Apart from the log-transformed market price data
 additional well-known technical indicators were calculated and used as training and prediction
-features. For every hour in the test set one of three labels (signals) – neutral, long or short – was
-generated. The time period considered for model training and selection was 01/2011 – 12/2017.
-The final model was tested from 01/2018 – 12/2018.
+features. The sequence length for training and testing was 15 periods. Hence, the trained model attatched one of three labels (neutral, long, short) to every hour in the test set - based on the past 15 OHLC/indicator values. The time period considered for model training and validating was 01/2011 – 12/2017. The final model was tested from 01/2018 – 12/2018.
 
 Unfortunatly the model did not perform well and also all tweaking and tuning did not really help. Since the model architecture has no real influence on the performance it all comes down to the training data set. I am experimenting with different labeling approaches and feature compositions. With a relative extrema approach used for labeling I achieved an accuracy of 55-60% but still no real breakthrough. I will probably have to label candlesticks myself by hand ;) 
 
