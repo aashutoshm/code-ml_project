@@ -1,5 +1,4 @@
 # code-ml_project
-code I produced for the ml project for my master's thesis
 
 In this empirical work a deep learning approach for classification of intraday financial time series data
 was presented using a LSTM neural network. To this end a data set of hourly open, high, low,
