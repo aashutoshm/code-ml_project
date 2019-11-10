@@ -19,7 +19,7 @@ In total this repository contains 4 files:
 * splitting and exporting training, validation and testing data
 
 # model_building
-In this part the actual NN is put together. Initially this project was conducted with Tensorflow 2.0 Alpha. With the version update some mechanics changed and I had to remove the hparam tuning part due to uncompatibility issues. 
+In this part the actual NN is put together. Initially this project was conducted with Tensorflow 2.0 Alpha. With the version update some mechanics changed and I had to remove the hparam tuning part due to incompatibility issues. 
 Also the evaluation of the classifier is included in this part. 
 
 # output&analysis
