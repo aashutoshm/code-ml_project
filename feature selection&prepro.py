@@ -193,7 +193,17 @@ for feature in feature_list:
     
 df_training = pd.DataFrame()
 
-
+for i in range(lag):
+    df_training['diffopenD'+str(i+1)] =df_main.Open-df_shifted['OpenD shift'+str(i+1)]
+    df_training['diffhighD'+str(i+1)] =df_main.Open-df_shifted['HighD shift'+str(i+1)]
+    df_training['difflowD'+str(i+1)] =df_main.Open-df_shifted['LowD shift'+str(i+1)]
+    df_training['diffcloseD'+str(i+1)] =df_main.Open-df_shifted['CloseD shift'+str(i+1)]
+    df_training['diffopen'+str(i+1)] =df_main.Open-df_shifted['Open shift'+str(i+1)]
+    df_training['diffhigh'+str(i+1)] =df_main.Open-df_shifted['High shift'+str(i+1)]
+    df_training['difflow'+str(i+1)] =df_main.Open-df_shifted['Low shift'+str(i+1)]
+    df_training['diffclose'+str(i+1)] =df_main.Open-df_shifted['Close shift'+str(i+1)]
+    df_training['rsi'+str(i+1)] = df_shifted['RSI shift'+str(i+1)]
+    
 for i in range(lag):
     df_training['diffopen'+str(i+1)] = np.log(df_main.Open)-np.log(df_shifted['Open shift'+str(i+1)])
     df_training['diffhigh'+str(i+1)] = np.log(df_main.Open)-np.log(df_shifted['High shift'+str(i+1)])
